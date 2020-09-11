@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary == None:
+    if a_dictionary is None:
         return None
-    for x, i in reversed(sorted(a_dictionary.items())):
-        return (x[0:])
+    for i in sorted(a_dictionary.items(), key=lambda x: x[1], reverse=True):
+        return (i[0])
