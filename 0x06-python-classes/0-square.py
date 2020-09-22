@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""file for class square"""
+
+
 class Square:
     """Square empty class for task 0"""
-    def __init__(self):
-        pass
+    pass
