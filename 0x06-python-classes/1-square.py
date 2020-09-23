@@ -6,4 +6,4 @@ class Square:
     """class establish Square"""
     def __init__(self, size):
         """initialize size as private atribute"""
-        self.__sizei = size
+        self.__size = size
