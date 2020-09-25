@@ -1,0 +1,24 @@
+testfile for add interger
+==========================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(13.5, 15)
+28
+
+>>> add_integer(2, 3)
+5
+
+>>> add_integer(2)
+100
+
+>>> add_integer(10, -2)
+8
+
+>>> add_integer("b")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("Jamie")
+Traceback (most recent call last):
+TypeError: a must be an integer
