@@ -27,31 +27,38 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
-        if args:
-            if len(args) >= 1:
-                super().__init__(args[0])
-            if len(args) >= 2:
-                self.width = args[1]
-            if len(args) >= 3:
-                self.height = args[2]
-            if len(args) >= 4:
-                self.x = args[3]
-            if len(args) >= 5:
-                self.y = args[4]
+        if len(args) > 0 :
+            for arg in range(args):
+                if arg == 0:
+                    self.id = args[arg]
+                if arg == 1:
+                    self.width = args[arg]
+                if arg == 2:
+                    self.height = args[arg]
+                if arg == 3:
+                    self.x = args[arg]
+                if arg == 4:
+                    self.y = args[arg]
         else:
-           if 'id' in kwargs:
-                super().__init__(kwargs['id'])
-           if 'width' in kwargs:
-                self.width = kwargs['width']
-           if 'height' in kwargs:
-                self.height = kwargs['height']
-           if 'x' in kwargs:
-                self.x = kwargs['x']
-           if 'y' in kwargs:
-                self.y = kwargs['y']
+            for karg in kwargs:
+                if karg == 'id':
+                    self.id = kwargs['id']
+                if karg == 'width':
+                    self.width = kwargs['width']
+                if karg =='height':
+                    self.height = kwargs['height']
+                if karg == 'x':
+                    self.x = kwargs['x']
+                if karg == 'y':
+                    self.y = kwargs['y']
+
 
     def __str__(self):
-        return("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.x, self.y, self.width, self.height))
+        return("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format
+
+               (self.id, self.x, self.y, self.width, self.height))
+    def to_dictionary(self):
+        return self.__dict__
 
     @property
     def height(self):
@@ -62,7 +69,7 @@ class Rectangle(Base):
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
-            raise ValueError("height must be >= 0") 
+            raise ValueError("height must be >= 0")
         self.__height = height
 
     @property
