@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-""" file for task 1"""
+""" file for base"""
 import json
 
 
 class Base:
-
+    """base for other objects"""
     __nb_objects = 0
 
     def __init__(self, id=None):
-        if not id == None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -22,6 +22,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """saves json to file"""
         d = []
         for i in list_objs:
             d.append(i.to_dictionary())
@@ -30,13 +31,13 @@ class Base:
 
     def from_json_string(json_string):
         if json_string is none or len(json_string) == 0:
-             return ("[]")
+            return ("[]")
         else:
-            return json.loads(json_string) 
+            return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """creastes an instance of class"""
         dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
-        
