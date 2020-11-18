@@ -1,0 +1,4 @@
+-- lists all cities contained in the database hbtn_0d_usa.
+SELECT tv_shows.title, tv_show_genre_id from tv_shows
+LEFT JOIN tv_show_genres ON tv_shows.id=tv_show_genres.show_id
+ORDER BY tv_shows.title, tv_shw_genres.genre_id ASC;
