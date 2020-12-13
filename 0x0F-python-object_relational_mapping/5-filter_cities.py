@@ -20,7 +20,7 @@ def getselect_states():
     sp = ""
     for row in query_rows:
         print(sp, end="")
-        print(row[1], end="")
+        print(row[0], end="")
         sp = ", "
     print()
     cur.close()
