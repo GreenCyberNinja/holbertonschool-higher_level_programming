@@ -17,11 +17,11 @@ def getselect_states():
            ORDER BY cities.id ASC;"
     cur.execute(cmd, (sys.argv[4],))
     query_rows = cur.fetchall()
-    sp
+    sp = ""
     for row in query_rows:
         print(sp, end="")
-        print(row[0], end="")
-        sep = ", "
+        print(row[1], end="")
+        sp = ", "
     print()
     cur.close()
     daba.close()
