@@ -11,12 +11,13 @@ def getselect_states():
                            passwd=sys.argv[2], db=sys.argv[3])
 
     cur = daba.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states\
+                WHERE BINARY name='{}'\
+                ORDER BY id ASC;".format(sys.argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
         state = row[1]
-        if state == sys.argv[4]:
-            print(row)
+        print(row)
 
     cur.close()
     daba.close()
