@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """model for state table"""
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declaritive import declaritive_base
+from SQLAlchemy import Column, Integer, String
+from SQLAlchemy.ext.declaritive import declaritive_base
 
 Base = declaritive_base()
 
