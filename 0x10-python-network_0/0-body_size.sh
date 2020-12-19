@@ -1,3 +1,3 @@
 #!/bin/bash
 # takes url argument returns size of body
-curl $1 -s -I | grep Content-length | awk '{print $2}'
+curl -sI "$1"| grep Content-Length | awk '{print $2}'
