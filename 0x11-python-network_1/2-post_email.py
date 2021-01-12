@@ -12,4 +12,3 @@ if __name__ == "__main__":
     req = urllib.request.Request(argv[1], em)
     with urllib.request.urlopen(req) as stuf:
         print(stuf.read().decode('utf'))
-
