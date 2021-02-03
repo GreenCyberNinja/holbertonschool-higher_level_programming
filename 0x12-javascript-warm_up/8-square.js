@@ -1,6 +1,6 @@
 #!/usr/bin/node
 if (isNaN(parseInt(process.argv[2]))) {
-  console.log('Missing sizes');
+  console.log('Missing size');
 } else {
   for (let ind = 0; ind < process.argv[2]; ind++) {
     let row = '';
