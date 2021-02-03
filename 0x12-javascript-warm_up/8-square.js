@@ -1,5 +1,5 @@
 #!/usr/bin/node
-if (process.argv.length < 3) {
+if (isNaN(parseInt(process.argv[2]))) {
   console.log('Missing sizes');
 } else {
   for (let ind = 0; ind < process.argv[2]; ind++) {
