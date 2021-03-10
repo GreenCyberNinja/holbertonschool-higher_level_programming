@@ -6,7 +6,7 @@ class Rectangle:
     """class Rectangle atributes width and height"""
 
     number_of_instances = 0
-    rep_symbol = '#'
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -19,7 +19,7 @@ class Rectangle:
             return(string)
         for x in range(self.height):
             for y in range(self.width):
-                string += str(rep_symbol)
+                string += str(self.print_symbol)
             if x is not self.height - 1:
                 string += '\n'
         return(string)
